@@ -20,6 +20,7 @@
 	-moz-transition-timing-function: ease; /* Firefox 4 */
 	-webkit-transition-timing-function: ease; /* Safari and Chrome */
 	-o-transition-timing-function: ease; /* Opera */
+	cursor: pointer;
 
 }
 
