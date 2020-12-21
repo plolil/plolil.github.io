@@ -1,7 +1,8 @@
 //declaring the counter with no scope(outside of any funtions) so it can be accessed by everything
 var i = 0
 /*
-the main body of code runs when the website loads. this is done by defining it as an event and then running that code on the "load" event of the window.
+the main body of code runs when the website finishes loading.
+this is done by defining the code as an event handler and then running that code on the "load" event of the window.
 stuff like document selectors might throw an error if you don't do this because the thing they're looking for isn't loaded.*/
 window.addEventListener('load', function() {
 	//set the html inside the <body/> tags to a <div> with id "main".
@@ -85,7 +86,7 @@ window.addEventListener('load', function() {
 		e.stopImmediatePropagation();
 		//stop the form from doing its default behavior. in this case, reloading the page.
 		e.preventDefault();
-		
+		//check if the string is either just whitespace or empty. if it is, stop the function before anything is done.
 		const checkws = document.getElementById("thebox").value.match(/\s*/);
 		if (checkws[0] === document.getElementById("thebox").value || document.getElementById("thebox").value === "") {
 			return;
