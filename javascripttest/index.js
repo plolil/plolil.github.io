@@ -85,6 +85,11 @@ window.addEventListener('load', function() {
 		e.stopImmediatePropagation();
 		//stop the form from doing its default behavior. in this case, reloading the page.
 		e.preventDefault();
+		
+		const checkws = document.getElementById("thebox").value.match(/\s*/);
+		if (checkws[0] === document.getElementById("thebox").value || document.getElementById("thebox").value === "") {
+			return;
+		}
 		//Array.protoype implies that you are working with a defined array as opposed to the Array interface.
 		//Array.prototype.push() appends something to an array. in this case, the text entered into the box
 		todo.push(document.getElementById("thebox").value);
