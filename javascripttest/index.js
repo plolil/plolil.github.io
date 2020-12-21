@@ -6,6 +6,8 @@ this is done by defining the code as an event handler and then running that code
 stuff like document selectors might throw an error if you don't do this because the thing they're looking for isn't loaded.*/
 window.addEventListener('load', function() {
 	//set the html inside the <body/> tags to a <div> with id "main".
+	//This operation will overwrite whatever currently resides there.
+	//I'm going to use a different method to prevent that.
 	document.body.innerHTML = "<div id=\"main\"></div>";
 	//look for an element with the id of 'main'. return a reference to the constant main
 	const main = document.getElementById("main");
