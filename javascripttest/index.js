@@ -68,7 +68,7 @@ window.addEventListener('load', function() {
 			//register an event for when the item is clicked.
 			document.getElementById("todo1-element-" + i.toString()).addEventListener("click", function(e) {
 				//a regular expression that will return the saved position
-				const posfinder = /todo1-element-(\d)/;
+				const posfinder = /todo1-element-(\d*)/;
 				//remove the task from the array
 				todo.splice(e.target.id.match(posfinder)[1],1);
 				//delete the DOM object for the removed task
