@@ -27,6 +27,5 @@
 .item:hover {
 	border-bottom: 2mm red solid;
 	border-radius: 1mm;
-	max-width: 5in;
 	color: red;
 }
